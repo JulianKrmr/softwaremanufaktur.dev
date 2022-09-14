@@ -1,14 +1,30 @@
 import React from "react";
-import "./App.css";
-import { Button } from 'react-daisyui'
+import { Button } from "react-daisyui";
+import ReactFullpage from "@fullpage/react-fullpage";
+import LandingPage from "./Pages/LandingPage";
 
 function App() {
   return (
-    <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-      <p className="text-3xl text-gray-700 font-bold mb-5">Welcome!</p>
-      <p className="text-gray-500 text-lg">React and Tailwind CSS in action</p>
-      <Button color="primary">Hello Daisy</Button>
-    </div>
+    <ReactFullpage
+      //fullpage options
+      licenseKey={""}
+      scrollingSpeed={1000}
+      render={({ state, fullpageApi }) => {
+        const scrollTo = (section: number) => {
+          fullpageApi.moveTo(section);
+        };
+        return (
+          <ReactFullpage.Wrapper>
+            <div className="section bg-primary">
+              <LandingPage scrollTo={scrollTo}></LandingPage>
+            </div>
+            <div className="section">
+              <p>Section 2</p>
+            </div>
+          </ReactFullpage.Wrapper>
+        );
+      }}
+    />
   );
 }
 
