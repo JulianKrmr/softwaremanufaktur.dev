@@ -14,7 +14,7 @@ function App() {
         };
         return (
           <ReactFullpage.Wrapper>
-            <div className="section bg-primary">
+            <div className="section bg-gray-900">
               <LandingPage scrollTo={scrollTo}></LandingPage>
             </div>
             <div className="section">
