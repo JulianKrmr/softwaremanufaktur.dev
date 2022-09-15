@@ -10,6 +10,7 @@ function App() {
       scrollingSpeed={1000}
       render={({ state, fullpageApi }) => {
         const scrollTo = (section: number) => {
+          //@ts-ignore
           fullpageApi.moveTo(section);
         };
         return (
