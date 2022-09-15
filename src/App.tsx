@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-daisyui";
 import ReactFullpage from "@fullpage/react-fullpage";
 import LandingPage from "./Pages/LandingPage";
 
