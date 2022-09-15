@@ -13,7 +13,6 @@ const Model = () => {
   const gltf = useGLTF("/space.glb");
   // @ts-ignore
   const { nodes } = gltf;
-  console.log(nodes);
   return (
     <group rotation={[-Math.PI / 2, 0, 0]} position={[0, -7, 0]} scale={7}>
       <group rotation={[Math.PI / 13.5, -Math.PI / 5.8, Math.PI / 5.6]}>
