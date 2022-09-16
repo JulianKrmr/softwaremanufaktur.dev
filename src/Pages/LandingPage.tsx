@@ -47,13 +47,20 @@ const LandingPage = (props: any) => {
               >
                 Projekte
               </Button>
-              <Button color="ghost">Kontakt</Button>
+              <Button
+                onClick={() => {
+                  props.scrollTo(3);
+                }}
+                color="ghost"
+              >
+                Kontakt
+              </Button>
             </div>
           </Navbar>
         </div>
         <div>
           <h1 className="flex absolute top-[25%] left-10 text-6xl font-bold leading-[5rem]">
-            Digitale Services, Handgemacht, <br/> bei der Softwaremanufaktur
+            Digitale Services, Handgemacht, <br /> bei der Softwaremanufaktur
           </h1>
         </div>
         <div className="absolute top-20 right-0 h-5/6 w-4/6">
