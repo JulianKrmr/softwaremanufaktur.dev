@@ -31,7 +31,7 @@ const LandingPage = (props: any) => {
   return (
     <>
       <div className="relative h-screen w-screen">
-        <div className="flex absolute inset-x-0 top-0 w-full component-preview p-4 items-center justify-center gap-2 font-sans">
+        <div className="flex absolute inset-x-0 top-0 w-full p-4 font-sans">
           <Navbar className="bg-base-100 rounded-box bg-grey-900">
             <div className="flex-1 ">
               <Button color="ghost" className="normal-case text-xl">
@@ -51,7 +51,12 @@ const LandingPage = (props: any) => {
             </div>
           </Navbar>
         </div>
-        <div className="absolute top-20 right-0 h-5/6 w-5/6">
+        <div>
+          <h1 className="flex absolute top-[25%] left-10 text-6xl font-bold leading-[5rem]">
+            Digitale Services, Handgemacht, <br/> bei der Softwaremanufaktur
+          </h1>
+        </div>
+        <div className="absolute top-20 right-0 h-5/6 w-4/6">
           <Canvas dpr={[1.5, 2]} linear shadows>
             <fog attach="fog" args={["#272730", 16, 30]} />
             <ambientLight intensity={0.75} />
@@ -78,7 +83,7 @@ const LandingPage = (props: any) => {
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={Math.PI / 2}
             />
-            <Stars radius={900} depth={50} count={1000} factor={10} />
+            <Stars radius={900} depth={50} count={1000} factor={20} />
           </Canvas>
           <div className="layer" />
           <Loader />
