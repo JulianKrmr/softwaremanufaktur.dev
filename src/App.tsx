@@ -1,6 +1,7 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import LandingPage from "./Pages/LandingPage";
+import ContactPage from "./Pages/ContactPage";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
               <p>Section 2</p>
             </div>
             <div className="section bg-gray-900">
-              <></>
+              <ContactPage></ContactPage>
             </div>
           </ReactFullpage.Wrapper>
         );
