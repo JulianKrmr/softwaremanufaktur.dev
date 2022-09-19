@@ -4,7 +4,7 @@ import { Button, Input, Textarea } from "react-daisyui";
 
 const ContactPage = () => {
   const [values, setValues] = useState({
-    fullName: "",
+    from_name: "",
     email: "",
     message: "",
   });
@@ -17,7 +17,7 @@ const ContactPage = () => {
       .then(
         (response) => {
           setValues({
-            fullName: "",
+            from_name: "",
             email: "",
             message: "",
           });
@@ -59,7 +59,7 @@ const ContactPage = () => {
               Send us message
             </h3>
             <Input
-              value={values.fullName}
+              value={values.from_name}
               onChange={handleChange}
               name="fullName"
               type="text"
